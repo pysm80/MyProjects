@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+//added for android annotations
+apply plugin: 'android-apt'
+def AAVersion = '4.0.0'
+
+//apt added for android annotations
+
+//buildscript added for android annotations
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        //classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // the latest version of the android-apt plugin
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+apt {
+    arguments {
+        resourcePackageName 'com.myapplication'
+   }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+
+    compile 'org.androidannotations:rest-spring-api:4.0.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:+'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:+'
+    apt 'org.androidannotations:rest-spring:4.0.0'
+
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+}

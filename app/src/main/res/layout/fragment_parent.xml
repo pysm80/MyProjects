@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.myapplication.Fragments.ContactsFragment">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mainTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/toolbar_color"
+        app:tabTextAppearance="@style/textAppearCustomTab"
+        android:background="@color/White"
+        app:tabIndicatorColor="@color/tab_indicator_color"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/tab_text_color" />
+
+    <com.myapplication.ui.NoSwipeViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@id/mainTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme_NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/White</item>
+        <item name="android:textSize">12.2sp</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:textColorSecondary">@color/White</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="actionModeBackground">@color/toolbar_color</item>
+    </style>
+
+    <style name="textAppearCustomTab" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">9.5sp</item>
+    </style>
+</resources>

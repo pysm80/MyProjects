@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_favorite"
+        android:title="action_favorite"
+        android:icon="@drawable/camera"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="settings"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+    <item android:id="@+id/action_settings3"
+        android:title="settings1"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+    <item android:id="@+id/action_settings4"
+        android:title="settings2"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+    <item android:id="@+id/action_settings5"
+        android:title="settings3"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+    <item android:id="@+id/action_settings6"
+        android:title="settings4"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+</menu>
